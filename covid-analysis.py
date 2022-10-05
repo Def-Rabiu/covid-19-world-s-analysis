@@ -4,7 +4,6 @@ import numpy as np
 from sklearn.impute import SimpleImputer
 
 df = pd.read_csv('C:\covid\covid_19_data.csv')
-# df.head(50)
 df.drop(['SNo', 'Last Update'], axis = 1, inplace = True)
 df.rename(columns = {'ObservationDate': 'Date', 'Province/State': 'State', 'Country/Region': 'Country'}, inplace = True)
 df['Date'] = pd.to_datetime(df['Date'])
